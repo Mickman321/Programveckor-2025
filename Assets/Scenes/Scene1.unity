@@ -644,7 +644,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869209778}
-  m_LocalRotation: {x: 0.27582207, y: 0.000000019140815, z: -0.000000005492522, w: 0.9612087}
+  m_LocalRotation: {x: 0.27582207, y: -0.000000016544773, z: 0.0000000047475783, w: 0.9612087}
   m_LocalPosition: {x: 0, y: 4, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 1080964291}
   m_Follow: {fileID: 1080964291}
   m_CommonLens: 1
@@ -2079,7 +2079,7 @@ MonoBehaviour:
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
@@ -2104,7 +2104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913555945}
-  m_LocalRotation: {x: 0.30924416, y: 8.373722e-16, z: -7.9322724e-16, w: 0.9509827}
+  m_LocalRotation: {x: 0.30924416, y: -0.000000012761203, z: 0.0000000041497357, w: 0.9509827}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
@@ -2178,7 +2178,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998397630}
-  m_LocalRotation: {x: 0.24239121, y: -4.359157e-24, z: 5.0582976e-24, w: 0.9701786}
+  m_LocalRotation: {x: 0.24239121, y: -0, z: -0, w: 0.9701786}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2227,7 +2227,7 @@ MonoBehaviour:
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
@@ -2252,7 +2252,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040444968}
-  m_LocalRotation: {x: 0.27582207, y: 0.000000019140815, z: -0.0000000054925207, w: 0.96120876}
+  m_LocalRotation: {x: 0.27582207, y: -0.000000016544773, z: 0.000000004747577, w: 0.96120876}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
