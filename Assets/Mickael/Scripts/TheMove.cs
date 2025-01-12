@@ -380,7 +380,9 @@ public class TheMove : MonoBehaviour
                 // rb.AddForce(transform.up * counter1Force, ForceMode.Impulse);
                 // rb.AddForce(-transform.up * counter2Force, ForceMode.Impulse);
                 rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+                
 
+                m_Animator.SetBool("IsFlying", true);
                 // nogravity = true;
                 moveSpeed = 15f;
             }
@@ -390,8 +392,21 @@ public class TheMove : MonoBehaviour
                 rb.constraints = ~RigidbodyConstraints.FreezePosition;
                 rb.AddForce(transform.up * counter1Force, ForceMode.Impulse);
                 moveSpeed = 8f;
-
+                m_Animator.SetBool("IsFlying", false);
             }
+            else if (grounded == true)
+            {
+                moveSpeed = 8f;
+                m_Animator.SetBool("IsFlying", false);
+                
+            }
+                
+            if (grounded == false && isJumping == false && staminaScript.staminaD == false)
+            {
+                m_Animator.SetBool("IsFlying", false);
+            }
+
+
 
         if (staminaScript.staminaD == false)
         {
@@ -523,7 +538,7 @@ public class TheMove : MonoBehaviour
             m_Animator.SetFloat("Run", moveSpeed, 0.05f, Time.deltaTime);
             if (Input.GetKey(crouchKey))
             {
-                m_Animator.SetFloat("CrouchWalk", moveSpeed);
+               // m_Animator.SetFloat("CrouchWalk", moveSpeed);
             }
         }
 
@@ -532,7 +547,7 @@ public class TheMove : MonoBehaviour
             m_Animator.SetFloat("Run", moveSpeed, 0.05f, Time.deltaTime);
             if (Input.GetKey(crouchKey))
             {
-                m_Animator.SetFloat("CrouchWalk", moveSpeed);
+               // m_Animator.SetFloat("CrouchWalk", moveSpeed);
             }
         }
 
@@ -541,7 +556,7 @@ public class TheMove : MonoBehaviour
             m_Animator.SetFloat("Run", moveSpeed, 0.05f, Time.deltaTime);
             if (Input.GetKey(crouchKey))
             {
-                m_Animator.SetFloat("CrouchWalk", moveSpeed);
+               // m_Animator.SetFloat("CrouchWalk", moveSpeed);
             }
         }
 
@@ -550,7 +565,7 @@ public class TheMove : MonoBehaviour
             m_Animator.SetFloat("Run", moveSpeed, 0.05f, Time.deltaTime);
             if (Input.GetKey(crouchKey))
             {
-                m_Animator.SetFloat("CrouchWalk", moveSpeed);
+               // m_Animator.SetFloat("CrouchWalk", moveSpeed);
             }
         }
         else
