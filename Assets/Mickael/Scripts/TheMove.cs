@@ -332,6 +332,7 @@ public class TheMove : MonoBehaviour
             jumpTimeCounter = jumpTime;
              // velocity = Vector3.up * jumpHeight;
            rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+            
 
         }
 
@@ -715,6 +716,7 @@ public class TheMove : MonoBehaviour
         if (Input.GetButtonDown("Jump") && grounded == true)
         {
             m_Animator.SetBool("IsJumping", true);
+            m_Animator.SetBool("IsFalling", false);
         }
         else if (!Input.GetButtonDown("Jump") && grounded == false)
         {
