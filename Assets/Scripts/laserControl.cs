@@ -31,7 +31,7 @@ public class laserControl : MonoBehaviour
             Ray ray = new Ray(position, direction);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 300, 1))
+            if (Physics.Raycast(ray, out hit, 100, 1))
             {
                 position = hit.point;
                 direction = Vector3.Reflect(direction, hit.normal);
