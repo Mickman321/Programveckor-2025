@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject coreMenu;
+    public GameObject settingMenu;
     public GameObject menuCamera;
     public GameObject targetObject;
     public GameObject cameraObject;
@@ -36,7 +38,12 @@ public class MenuManager : MonoBehaviour
     }
 
     public void Settings(){
-
+        settingMenu.SetActive(true);
+        coreMenu.SetActive(false);
+    }
+    public void SettingsGoBack(){
+        settingMenu.SetActive(false);
+        coreMenu.SetActive(true);
     }
 
     public void Quit(){
