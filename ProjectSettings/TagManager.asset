@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ljus
+<<<<<<< Updated upstream
   - PuzzleCube
+=======
+  - Mirror
+  - TargetObject
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
