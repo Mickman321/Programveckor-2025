@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 2b143fb7a6a59cd47a46c2ed09f95302
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 1709787148563006700
+    second: Falling animation
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 1
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Falling animation
+      takeName: Falling animation
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 1
+    maxBonesPerVertex: 7
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: "Spelprojekt 2025 karakt\xE4r falling ani 2(Clone)"
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: "Spelprojekt 2025 karakt\xE4r falling ani 2(Clone)"
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.8111815, y: -0.013564022, z: -0.003464734, w: 0.5846269}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bone.001
+      parentName: Bone
+      position: {x: -3.2014213e-12, y: 0.009476493, z: -8.582901e-11}
+      rotation: {x: -0.12134396, y: -0.021315273, z: -0.007093869, w: 0.9923563}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: 1.8626451e-11, y: 0.013000001, z: -5.5879353e-11}
+      rotation: {x: 0.061705697, y: 0.01958916, z: 0.001497118, w: 0.997901}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Bone.003
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.082335494, y: 0.14059272, z: 0.78920007, w: 0.5921299}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone.005
+      parentName: Bone.003
+      position: {x: -7.298303e-11, y: 0.009792943, z: 1.193257e-10}
+      rotation: {x: -0.7090723, y: 0.18115686, z: 0.10156971, w: 0.6738563}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Bone.004
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.09552822, y: -0.042518344, z: -0.83027375, w: 0.54745966}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone.006
+      parentName: Bone.004
+      position: {x: 8.009726e-12, y: 0.009915549, z: 1.02154445e-10}
+      rotation: {x: -0.69651765, y: -0.21740232, z: -0.04500884, w: 0.6823296}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: "Karakt\xE4r"
+      parentName: "Spelprojekt 2025 karakt\xE4r falling ani 2(Clone)"
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
