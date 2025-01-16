@@ -5,12 +5,6 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    #region variabels
-
-    public GameObject general_menu;
-    public GameObject graphics_menu;
-    public GameObject audio_menu;
-    //
     public GameObject coreMenu;
     public GameObject settingMenu;
     public GameObject menuCamera;
@@ -20,7 +14,6 @@ public class MenuManager : MonoBehaviour
     private NewMove newMove;
     private bool fadeOut;
     public CanvasGroup canvasGroup;
-    #endregion
     public void Awake()
     {
          theMove = targetObject.GetComponent<TheMove>();
@@ -37,7 +30,6 @@ public class MenuManager : MonoBehaviour
         }
         
     }
-    #region MainMenuButtons
     public void StartGame(){
         menuCamera.SetActive(false);
         //this.gameObject.SetActive(false);
@@ -55,30 +47,9 @@ public class MenuManager : MonoBehaviour
     }
 
     public void Quit(){
-        Application.Quit();
-    }
-    #endregion
-    
-    public void General(){
-        closeAllSettings();
-        general_menu.SetActive(true);
+
     }
 
-    public void Graphics(){
-        closeAllSettings();
-        graphics_menu.SetActive(true);
-    }
-
-    public void Audio(){
-        closeAllSettings();
-        audio_menu.SetActive(true);
-    }
-
-    void closeAllSettings(){
-        general_menu.SetActive(false);
-        graphics_menu.SetActive(false);
-        audio_menu.SetActive(false);
-    }
     public void Fullscreen(){
         Screen.fullScreen = !Screen.fullScreen;
     }

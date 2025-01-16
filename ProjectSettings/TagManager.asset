@@ -3,15 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ljus
+<<<<<<< Updated upstream
+  - PuzzleCube
+=======
+  - Mirror
+  - TargetObject
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - whatIsGround
   - Water
   - UI
-  - 
+  - poi
   - 
   - 
   - 

@@ -45,8 +45,8 @@ public class ProceduralAnimations : MonoBehaviour
     {
         if (enableFeetIk == false) return;
         if (animator == null) return;
-        //print(rightFootPosition);
-        //print(HumanBodyBones.RightFoot);
+        print(rightFootPosition);
+        print(HumanBodyBones.RightFoot);
         AdjustFeetTarget(ref rightFootPosition, HumanBodyBones.RightFoot);
         AdjustFeetTarget(ref leftFootPosition, HumanBodyBones.LeftFoot);
 
@@ -54,8 +54,8 @@ public class ProceduralAnimations : MonoBehaviour
         FeetPositionSolver(rightFootPosition, ref rightFootIkPosition, ref rightFootIkRotation); // handle the solver forr right foot
         FeetPositionSolver(leftFootPosition, ref leftFootIkPosition, ref leftFootIkRotation); // handle the solver left foot
 
-        //Debug.Log(leftFootIkRotation);
-        //Debug.Log(rightFootIkRotation);
+        Debug.Log(leftFootIkRotation);
+        Debug.Log(rightFootIkRotation);
     }
 
     private void OnAnimatorIK(int layerIndex)
