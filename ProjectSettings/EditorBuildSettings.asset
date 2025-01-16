@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level design.unity
     guid: ce914b61a3869584184de6807341b7bc
+  - enabled: 1
+    path: Assets/Scenes/Diyor.unity
+    guid: a5082c414fadd4e4fbee073405d3c30f
   m_configObjects: {}
