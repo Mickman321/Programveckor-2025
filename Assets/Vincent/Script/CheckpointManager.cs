@@ -10,13 +10,28 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField] Vector3 vectorPoint;
     [SerializeField] float dead;
 
+    private bool ifDeadPlayMusicAndNoMorePls = false;
+
     private void Update()
     {
         if (player.transform.position.y < -dead)
         {
-            player.transform.position = vectorPoint;
+            
+            if (!ifDeadPlayMusicAndNoMorePls)
+            {
+                AudioManager.Instance.PlaySFX("gameover");
+                ifDeadPlayMusicAndNoMorePls = true;
+            }
+            StartCoroutine(RespawnTimer());
         }
 
+    }
+
+    IEnumerator RespawnTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        player.transform.position = vectorPoint;
+        ifDeadPlayMusicAndNoMorePls = false;
     }
 
     private void OnTriggerEnter(Collider other)
