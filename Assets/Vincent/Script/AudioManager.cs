@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.UI;
 
 // skapad av vincent fajersson
 public class AudioManager : MonoBehaviour
@@ -12,7 +13,13 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] musicSounds, sfxSounds; // skapar en array f?r att ha informationen av ljud 
     public AudioSource musicSource, sfxSource; // skapar en array f?r att ha informationen av musik 
-
+    public AudioMixer audioMixer;
+    public Slider musicSlider;
+    public Slider sfxSlider;
+    public Slider mainSlider;
+    private void Update(){
+        SetMusicVolume(volumeSlider.value);
+    }
     private void Awake()
     {
         if (Instance == null) // ifall det inte finns en AudioManager i spelet s? g?r den en AudioManager 
@@ -28,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("Main Music"); // spelar musiken n?r man ?ppnar spelet
+        PlayMusic("game"); // spelar musiken n?r man ?ppnar spelet
     }
 
     public void PlayMusic(string name) // g?r igenom array som vi skapade i b?rjan f?r att hitta musik
@@ -60,5 +67,16 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(s.clip);
         }
     }
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("Music", volume); 
+        print("1" + volumeSlider.value);
+        print(volume);
+    }
 
+    // Method to set the volume of the SFX
+    public void SetSFXVolume(float volume)
+    {
+        audioMixer.SetFloat("SFX", volume); 
+    }
 }
