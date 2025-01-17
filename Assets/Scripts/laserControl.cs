@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class laserControl : MonoBehaviour
 {
-    int maxBounces = 5;
+    int maxBounces = 2;
     private LineRenderer lr;
     [SerializeField]
     private Transform startPoint;
@@ -46,7 +46,7 @@ public class laserControl : MonoBehaviour
             Ray ray = new Ray(position, direction);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100, 1))
+            if (Physics.Raycast(ray, out hit, 10, 1))
             {
                 position = hit.point;
                 direction = Vector3.Reflect(direction, hit.normal);
