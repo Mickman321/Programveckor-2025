@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
     public Slider sfxSlider;
     public Slider mainSlider;
     private void Update(){
-        //SetMusicVolume(musicSlider.value);
+        SetMusicVolume(musicSlider.value);
     }
     private void Awake()
     {
@@ -67,5 +67,15 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(s.clip);
         }
     }
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("Music", volume); 
+        print(volume);
+    }
 
+    // Method to set the volume of the SFX
+    public void SetSFXVolume(float volume)
+    {
+        audioMixer.SetFloat("SFX", volume); 
+    }
 }
