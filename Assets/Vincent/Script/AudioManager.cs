@@ -67,16 +67,5 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(s.clip);
         }
     }
-    public void SetMusicVolume(float volume)
-    {
-        audioMixer.SetFloat("Music", volume); 
-        print("1" + volumeSlider.value);
-        print(volume);
-    }
 
-    // Method to set the volume of the SFX
-    public void SetSFXVolume(float volume)
-    {
-        audioMixer.SetFloat("SFX", volume); 
-    }
 }
