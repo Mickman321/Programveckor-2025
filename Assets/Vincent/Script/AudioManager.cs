@@ -19,6 +19,9 @@ public class AudioManager : MonoBehaviour
     public Slider mainSlider;
     private void Update(){
         SetMusicVolume(musicSlider.value);
+        SetSFXVolume(sfxSlider.value);
+        SetMainVolume(mainSlider.value);
+
     }
     private void Awake()
     {
@@ -70,12 +73,19 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         audioMixer.SetFloat("Music", volume); 
-        print(volume);
+        //print("garg Music " + volume);
     }
 
     // Method to set the volume of the SFX
     public void SetSFXVolume(float volume)
     {
         audioMixer.SetFloat("SFX", volume); 
+       // print("garg SFX " + volume);
+    }
+
+    public void SetMainVolume(float volume)
+    {
+        audioMixer.SetFloat("Master", volume); 
+        //print("garg Master " + volume);
     }
 }
