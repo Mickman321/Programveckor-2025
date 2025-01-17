@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
     public Slider sfxSlider;
     public Slider mainSlider;
     private void Update(){
-        SetMusicVolume(musicSlider.value);
+        //SetMusicVolume(musicSlider.value);
     }
     private void Awake()
     {
