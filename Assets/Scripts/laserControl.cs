@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Media;
 using UnityEngine;
 
 public class laserControl : MonoBehaviour
@@ -15,10 +16,20 @@ public class laserControl : MonoBehaviour
     [SerializeField]
     private string targetObjectTag = "TargetObject"; // Change this to your target object's tag
 
+    [SerializeField]
+    private AudioClip hitSound; // Assign your sound effect in the inspector
+    private AudioSource audioSource;
+
+
+    private bool soundPlayed = false;
+
+
     void Start()
     {
         lr = GetComponent<LineRenderer>();
         lr.SetPosition(0, startPoint.position);
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -47,6 +58,12 @@ public class laserControl : MonoBehaviour
                     // Trigger your action here
                     TriggerAction(hit.transform);
                     break; // Exit the loop if the target object is hit
+                }
+
+                if (hit.transform.CompareTag("ResetPitchObject")) // Example tag to reset pitch
+                {
+
+                    soundPlayed = false;
                 }
 
                 if (hit.transform.CompareTag("Mirror") || !reflectionOnlyMirrorIsPossible)
@@ -80,6 +97,22 @@ public class laserControl : MonoBehaviour
         // Implement the action you want to trigger when the laser hits the target object
         //Debug.Log("Laser hit the target object: " + hitObject.name);
         // You can start a class, call a method, or perform any action here
+        PlayHitSound();
+
     }
+
+    void PlayHitSound()
+    {
+        if (!soundPlayed) // Check if the sound has already been played
+        {
+            print(audioSource);
+
+            audioSource.PlayOneShot(hitSound);
+
+            soundPlayed = true; // Set the flag to true to prevent further playback
+        }
+
+    }
+
 
 }
