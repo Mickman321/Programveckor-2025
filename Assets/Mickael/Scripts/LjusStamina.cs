@@ -15,7 +15,7 @@ public class LjusStamina : MonoBehaviour
             staminaD = true;
 
             print("Working");
-        } if (Input.GetKeyUp(KeyCode.Space) && Stamina <1f)
+        } if (Input.GetKeyUp(KeyCode.Space))
         {
             staminaD = false;
 
@@ -23,7 +23,7 @@ public class LjusStamina : MonoBehaviour
         }
         if (staminaD == true)
         {
-            Stamina = Stamina -= 1 * Time.deltaTime * 5;
+            Stamina = Stamina -= 1 * Time.deltaTime * 10;
         }
 
         if (Stamina < 1f)
