@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level design.unity
     guid: ce914b61a3869584184de6807341b7bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Diyor.unity
     guid: a5082c414fadd4e4fbee073405d3c30f
+  - enabled: 1
+    path: Assets/Vincent/building.unity
+    guid: fb10e05c80b3f6148ab1a3ee7ef43421
   m_configObjects: {}

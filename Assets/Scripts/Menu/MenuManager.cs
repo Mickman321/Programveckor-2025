@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+
+    public GameObject targetnlc;
+
     public GameObject general_menu;
     public GameObject graphics_menu;
     public GameObject audio_menu;
@@ -19,11 +22,12 @@ public class MenuManager : MonoBehaviour
     public CanvasGroup canvasGroup;
     public void Awake()
     {
+        targetnlc.SetActive(false); 
+        Cursor.lockState = CursorLockMode.None; // Lock the cursor
+        Cursor.visible = true;
          theMove = targetObject.GetComponent<TheMove>();
          newMove = cameraObject.GetComponent<NewMove>();
-
-         theMove.enabled = false;
-          newMove.enabled = false;
+        Debug.Log("awake?");
     }
 
     void FixedUpdate(){
@@ -34,10 +38,14 @@ public class MenuManager : MonoBehaviour
         
     }
     public void StartGame(){
+        
         menuCamera.SetActive(false);
         //this.gameObject.SetActive(false);
         fadeOut = true;
         StartCoroutine(delay(2f));
+        new WaitForSeconds(2);
+        targetnlc.SetActive(true); Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
+        Cursor.visible = false;
     }
 
     public void Settings(){

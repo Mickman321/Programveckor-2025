@@ -5,6 +5,8 @@ using UnityEngine;
 public class TheMove : MonoBehaviour
 {
     LjusStamina staminaScript;
+    [Header("Particles & SFX")]
+    public GameObject jumpParticle;
 
     /*public float Stamina = 100;
     public float MaxStamina = 100f;
@@ -105,7 +107,7 @@ public class TheMove : MonoBehaviour
 
     public float jumpBufferTime;
 
-    public float jumpHeight = 10f;
+    public float jumpHeight = 25f;
 
     public float jumpTimeLimit = 0.35f; // Time limit for variable jump
 
@@ -362,7 +364,7 @@ public class TheMove : MonoBehaviour
         else
         {
             isJumping = false;
-            jumpHeight = 10f;
+            jumpHeight = 25f;
         }
 
         // Fly thingaruni
@@ -394,6 +396,9 @@ public class TheMove : MonoBehaviour
                 rb.AddForce(transform.up * counter1Force, ForceMode.Impulse);
                 moveSpeed = 8f;
                 m_Animator.SetBool("IsFlying", false);
+            Instantiate(jumpParticle, orientation.transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySFX("Jump");
+            Destroy(jumpParticle, 3f);
             }
             else if (grounded == true)
             {
@@ -633,7 +638,7 @@ public class TheMove : MonoBehaviour
         {
             moveSpeed = 8f;
             m_Animator.SetFloat("IsCrouching", 0);
-            jumpHeight = 10f;
+            jumpHeight = 25f;
             // m_Animator.SetFloat("CrouchWalk", 0);
 
         }

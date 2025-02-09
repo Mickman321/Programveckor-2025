@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StaminaCollider : MonoBehaviour
 {
+    public GameObject krystalExplody;
     LjusStamina staminaScript;
     private void Update()
     {
@@ -15,7 +16,14 @@ public class StaminaCollider : MonoBehaviour
         if (collision.gameObject.tag.Equals("Ljus"))
         {
             staminaScript.Stamina = 100f;
+            Instantiate(krystalExplody, collision.transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySFX("Kristal");
+            Destroy(collision.gameObject);
+            Destroy(krystalExplody, 3f);
+
         }
+        
+
 
     }
 }
